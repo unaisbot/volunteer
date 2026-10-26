@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Volunteer with TBARC India to support biodiversity conservation, ecological research, and environmental awareness.">
+  <meta name="theme-color" content="#075333">
+  <title>Volunteer with Us | TBARC India</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    :root {
+      --green: #075333;
+      --dark: #043b25;
+      --light: #f0f6ef;
+      --pale: #e4efe3;
+      --text: #202923;
+      --muted: #626a63;
+      --border: #e4ebe4;
+      --page: #f7faf6;
+      --shadow: 0 10px 30px rgba(4,59,37,.07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: #fff; line-height: 1.7; }
+    a { color: inherit; }
+    .site-header { background: #fff; border-bottom: 1px solid var(--border); }
+    .nav-container { max-width: 1160px; margin: auto; padding: 12px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-logo { display: block; width: 145px; max-height: 54px; object-fit: contain; object-position: left center; }
+    .nav-links { display: flex; align-items: center; gap: 10px; }
+    .nav-link { display: inline-block; padding: 9px 15px; color: var(--green); text-decoration: none; font-size: 13px; font-weight: 700; border-radius: 7px; }
+    .nav-link:hover { background: var(--light); }
+    .nav-link.primary { background: var(--green); color: #fff; }
+    .nav-link.primary:hover { background: var(--dark); }
+    .hero { color: #fff; padding: 82px 22px 76px; background: linear-gradient(90deg, rgba(2,36,20,.93), rgba(4,64,35,.73)), url('images/hero.jpg') center 45%/cover no-repeat; }
+    .hero-inner { max-width: 1100px; margin: auto; }
+    .eyebrow { display: inline-block; padding: 6px 13px; margin-bottom: 18px; border: 1px solid #ffffff66; border-radius: 30px; background: #ffffff18; color: #f0f6ef; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 0 0 18px; font-size: clamp(36px, 5vw, 60px); line-height: 1.1; letter-spacing: -1.2px; }
+    .hero p { max-width: 760px; margin: 0 0 28px; color: #e2eee4; font-size: 17px; }
+    .button { display: inline-block; padding: 13px 21px; border-radius: 8px; background: #fff; color: var(--green); text-decoration: none; font-weight: 800; font-size: 14px; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); background: var(--light); }
+    .section { padding: 58px 22px; }
+    .section.soft { background: var(--page); }
+    .container { max-width: 1100px; margin: auto; }
+    .section-heading { max-width: 760px; margin: 0 auto 32px; text-align: center; }
+    .section-heading .kicker { margin: 0 0 8px; color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; }
+    h2 { color: var(--dark); font-size: clamp(26px, 3vw, 36px); line-height: 1.25; margin: 0 0 14px; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .intro { max-width: 850px; margin: 0 auto; text-align: center; font-size: 16px; color: #424b44; }
+    .opportunity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .opportunity-card { padding: 25px; border: 1px solid var(--border); border-radius: 15px; background: #fff; box-shadow: var(--shadow); }
+    .card-icon { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 17px; border-radius: 12px; background: var(--light); color: var(--green); }
+    .card-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .opportunity-card h3 { margin: 0 0 9px; color: var(--dark); font-size: 18px; line-height: 1.35; }
+    .opportunity-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .benefit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; max-width: 900px; margin: auto; }
+    .benefit { display: flex; align-items: flex-start; gap: 12px; color: #424b44; }
+    .check { flex: 0 0 25px; width: 25px; height: 25px; display: grid; place-items: center; margin-top: 2px; border-radius: 50%; background: var(--pale); color: var(--green); font-weight: 800; }
+    .who { max-width: 850px; margin: auto; text-align: center; color: #424b44; }
+    .cta { padding: 50px 22px; color: #fff; background: var(--green); text-align: center; }
+    .cta-inner { max-width: 800px; margin: auto; }
+    .cta h2 { color: #fff; }
+    .cta p { color: #e0eee4; margin: 0 auto 25px; max-width: 680px; }
+    .cta .button { background: #fff; color: var(--green); }
+    .site-footer { background: #bfd6c5; border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; }
+    .footer-brand { margin-bottom: 5px; color: var(--green); font-size: 19px; font-weight: 800; }
+    .site-footer p { margin: 5px 0; color: #4f6254; font-size: 12px; }
+    .site-footer a { color: var(--green); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+    @media (max-width: 800px) { .opportunity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) {
+      .nav-container { padding: 10px 14px; }
+      .brand-logo { width: 112px; }
+      .nav-links { gap: 2px; }
+      .nav-link { padding: 8px 9px; font-size: 12px; }
+      .hero { padding: 60px 20px 56px; }
+      .hero p { font-size: 15px; }
+      .section { padding: 43px 16px; }
+      .opportunity-grid, .benefit-grid { grid-template-columns: minmax(0, 1fr); }
+      .opportunity-card { padding: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="https://tbarc.in" aria-label="TBARC India home">
+        <img class="brand-logo" src="images/logo.png" alt="TBARC India logo" onerror="this.style.display='none'">
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="https://tbarc.in">Home</a>
+        <a class="nav-link primary" href="#apply">Volunteer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Volunteer with TBARC India</span>
+        <h1>Be a Part of the Change. Volunteer for Nature.</h1>
+        <p>Turn your passion for biodiversity, ecology, and conservation into meaningful action. Join a community working to protect nature, support research, and inspire environmental awareness.</p>
+        <a class="button" href="#apply">Join Us as a Volunteer <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="kicker">Make a difference</p>
+          <h2>There’s a Place for You on Our Team</h2>
+        </div>
+        <p class="intro"><strong>Tropical Biodiversity Action and Research Centre (TBARC India)</strong> welcomes enthusiastic volunteers who want to contribute their time, skills, and ideas to biodiversity conservation, ecological research, and environmental education. Whether you enjoy fieldwork, working with data, designing creative content, capturing stories through photos and videos, or engaging communities, you can help make a difference.</p>
+      </div>
+    </section>
+
+    <section class="section soft" id="opportunities">
+      <div class="container">
+        <div class="section-heading">
+          <p class="kicker">Find your role</p>
+          <h2>Volunteer Opportunities</h2>
+          <p>Choose an area that matches your interests, skills, and availability.</p>
+        </div>
+        <div class="opportunity-grid">
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 3.5C12 3.5 5 6.5 5 13a5 5 0 0 0 5 5c6.5 0 9.5-7 10.5-14.5Z"/><path d="M3.5 21c2-5 6-8 12-11"/></svg></div>
+            <h3>Fieldwork &amp; Habitat Restoration</h3>
+            <p>Participate in biodiversity surveys, habitat monitoring, restoration activities, and conservation initiatives.</p>
+          </article>
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/><path d="M8.5 10.8h4.6M10.8 8.5v4.6"/></svg></div>
+            <h3>Research &amp; Data Support</h3>
+            <p>Assist with ecological research, biodiversity documentation, data collection, organisation, and analysis.</p>
+          </article>
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18h1.2a2 2 0 0 0 1.5-3.3 1.8 1.8 0 0 1 1.4-3h1.1A3.8 3.8 0 0 0 21 11c0-4.4-4-8-9-8Z"/><circle cx="7.5" cy="10" r="1"/><circle cx="10" cy="6.8" r="1"/><circle cx="14.5" cy="7.2" r="1"/><circle cx="17" cy="10.5" r="1"/></svg></div>
+            <h3>Social Media &amp; Creative Design</h3>
+            <p>Create awareness campaigns, posters, infographics, and engaging digital content for conservation.</p>
+          </article>
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l1.5-2h7L17 7h3a1.5 1.5 0 0 1 1.5 1.5v10A1.5 1.5 0 0 1 20 20H4a1.5 1.5 0 0 1-1.5-1.5v-10A1.5 1.5 0 0 1 4 7Z"/><circle cx="12" cy="13" r="4"/></svg></div>
+            <h3>Photography &amp; Videography</h3>
+            <p>Capture plants, wildlife, habitats, field activities, and stories that bring biodiversity to life.</p>
+          </article>
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5Z"/><path d="M4 4.5v17M8 6h8M8 10h8"/></svg></div>
+            <h3>Education &amp; Awareness</h3>
+            <p>Support biodiversity education programmes, workshops, learning resources, and environmental campaigns.</p>
+          </article>
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8.5 12 2.2 2.2a2 2 0 0 0 2.8 0l4-4"/><path d="m3 9 4-4 4 2 2-1 8 4-2 6-4 3-3-2-2 1-5-4Z"/><path d="m7 5-3 4M18 7l3 3"/></svg></div>
+            <h3>Events &amp; Community Engagement</h3>
+            <p>Help organise webinars, workshops, outreach programmes, and community-based conservation activities.</p>
+          </article>
+          <article class="opportunity-card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11Z"/><path d="M13 20h7"/></svg></div>
+            <h3>Writing &amp; Documentation</h3>
+            <p>Contribute articles, blogs, reports, and educational resources on biodiversity and ecology.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="kicker">Grow while giving back</p>
+          <h2>Why Volunteer with TBARC?</h2>
+          <p>Your contribution supports nature conservation while helping you build skills and experience.</p>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit"><span class="check" aria-hidden="true">✓</span><span>Gain practical exposure to biodiversity conservation and ecological research.</span></div>
+          <div class="benefit"><span class="check" aria-hidden="true">✓</span><span>Develop skills in research, communication, teamwork, and environmental outreach.</span></div>
+          <div class="benefit"><span class="check" aria-hidden="true">✓</span><span>Collaborate with students, researchers, and conservation enthusiasts.</span></div>
+          <div class="benefit"><span class="check" aria-hidden="true">✓</span><span>Contribute to meaningful initiatives that support biodiversity and sustainability.</span></div>
+          <div class="benefit"><span class="check" aria-hidden="true">✓</span><span>Share your ideas, creativity, and knowledge with a growing conservation community.</span></div>
+          <div class="benefit"><span class="check" aria-hidden="true">✓</span><span>Help make biodiversity and conservation knowledge accessible to more people.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="kicker">Everyone can contribute</p>
+          <h2>Who Can Apply?</h2>
+        </div>
+        <p class="who">We welcome undergraduate and postgraduate students, research scholars, early-career professionals, photographers, designers, writers, nature enthusiasts, and anyone interested in biodiversity and conservation. You do not need to be an expert to get started. <strong>Your enthusiasm, willingness to learn, creativity, and commitment to nature are what matter most.</strong></p>
+      </div>
+    </section>
+
+    <section class="cta" id="apply">
+      <div class="cta-inner">
+        <h2>Ready to Volunteer?</h2>
+        <p>Every contribution counts. Whether you support research, join field activities, create content, or help spread awareness, your involvement can make a difference. Join TBARC India and turn your passion for nature into action.</p>
+        <!-- Replace the email below with your volunteer application form URL if you have one. -->
+        <a class="button" href="mailto:tbarcindia@gmail.com?subject=TBARC%20Volunteer%20Application">Apply to Volunteer <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">TBARC India</div>
+    <p>Tropical Biodiversity Action and Research Centre</p>
+    <p><a href="https://tbarc.in">tbarc.in</a> &nbsp; | &nbsp; <a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p>
+    <p>© 2026 TBARC India. All rights reserved.</p>
+  </footer>
+</body>
+</html>
